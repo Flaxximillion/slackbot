@@ -13,7 +13,7 @@ var app = express();
 var router = express.Router();
 //set our port to either a predetermined port number if you have set
 //it up, or 3001
-var port = process.env.API_PORT || 3001;
+var port = process.env.PORT || 3001;
 
 mongoose.connect("mongodb://slackbot:hellobot@ds135234.mlab.com:35234/flaxxiebase");
 
