@@ -35,11 +35,6 @@ app.use(function (req, res, next) {
 
 app.use(express.static(`${__dirname}/client/build`));
 
-//now we can set the route path & initialize the API
-router.get('/', function (req, res) {
-    res.json({message: 'API Initialized!'});
-});
-
 router.route('/links')
     .get(function(req, res){
         Link.find(function(err, links){
